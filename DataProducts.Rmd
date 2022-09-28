@@ -1,0 +1,21 @@
+---
+title: "DataProduct"
+author: "Jochen van Waasen"
+date: "2022-09-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## September 28th, 20222
+
+```{r}
+library(leaflet)
+m <- leaflet()
+m <- addMarkers(m, lat=47.1858, lng=9.1229, popup="Speer (mountain)")
+m <- setView(map=m, lat=47.1858, lng=9.1229, zoom = 10)
+m <- addTiles(m)
+m
+```
