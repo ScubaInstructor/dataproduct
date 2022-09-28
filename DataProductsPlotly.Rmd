@@ -1,0 +1,22 @@
+---
+title: "DataProduct with plotly"
+author: "Jochen van Waasen"
+date: "2022-09-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## September 28th, 20222
+
+Scatter plot taken from plotly documentation.
+https://plotly.com/r/line-and-scatter/
+
+```{r}
+library(ggplot2)
+library(plotly, warn.conflicts = FALSE)
+fig <- plot_ly(data = iris, x = ~Sepal.Length, y = ~Petal.Length, type = "scatter", mode= 'markers')
+fig
+```
